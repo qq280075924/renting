@@ -4,10 +4,11 @@ GOPATH:=$(shell go env GOPATH)
 init:
 	go get -u github.com/golang/protobuf/proto
 	go get -u github.com/golang/protobuf/protoc-gen-go
-	go get github.com/micro/micro/v3/cmd/protoc-gen-micro
+	#go get github.com/micro/micro/v3/cmd/protoc-gen-micro
+	go get github.com/asim/go-micro/cmd/protoc-gen-micro/v3
 .PHONY: proto
 proto:
-	protoc --proto_path=. --micro_out=. --gofast_out=:. proto/GetHouseInfo.proto
+	protoc --proto_path=. --micro_out=. --go_out=:. proto/GetHouseInfo.proto
 	
 .PHONY: build
 build:

@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package go.micro.srv.GetHouseInfo;
 
-option go_package = "proto;GetHouseInfo";
+option go_package = "./proto;GetHouseInfo";
 
 service GetHouseInfo {
 	rpc GetHouseInfo(Request) returns (Response) {}
